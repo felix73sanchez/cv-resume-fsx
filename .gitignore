@@ -1,0 +1,43 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.toc
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.glg
+*.glo
+*.gls
+*.acn
+*.acr
+*.alg
+*.bcf
+*.run.xml
+*.xdv
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak

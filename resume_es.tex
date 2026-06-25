@@ -1,0 +1,152 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% Based on: https://github.com/posquit0/Awesome-CV
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[]{awesome-cv}
+\usepackage{textcomp}
+\fontdir[fonts/]
+
+\newcommand*{\sectiondir}{resume/}
+
+%%% Color
+\colorlet{awesome}{awesome-red}
+
+%%% Tighter page margins
+\geometry{left=1.4cm, top=1.2cm, right=1.4cm, bottom=1.2cm, footskip=.4cm}
+
+    \begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Profile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\headerfirstnamestyle{Felix} \headerlastnamestyle{Sanchez} \\
+	\vspace{2mm}
+	{\faEnvelope\ felixsanchez73@outlook.com}  |  {\faMobile\ (+1809) 405-0876}  |  {\faMapMarker\ Santo Domingo, DR}
+	\newline {\faLinkedinSquare\ \href{https://www.linkedin.com/in/felixrsanchez/}{linkedin.com/in/felixrsanchez}}
+	\hspace{2mm} {\faGithubSquare\ \href{https://github.com/felix73sanchez}{github.com/felix73sanchez}}
+	\hspace{2mm} {\faLink\ \href{https://portfolio.fsxsys.org}{portfolio.fsxsys.org}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Habilidades}
+\begin{cvskills}
+	\cvskill{Lenguajes}{Java 17/21, TypeScript, PL/SQL, Python, Bash}
+	\cvskill{Backend}{Spring Boot 3/4, Spring Cloud, Spring Data JPA, Spring Security, NestJS, .NET}
+	\cvskill{Arquitectura}{Microservicios, CQRS, REST APIs, Arquitectura por Capas, Patr\'{o}n DTO}
+	\cvskill{Bases de datos}{PostgreSQL, Oracle, MS-SQL Server, Redis}
+	\cvskill{DevOps}{Docker, Docker Compose, Linux (homelab propio), Git, CI/CD}
+	\cvskill{Pr\'{a}cticas}{Clean Architecture, SOLID, TDD, MapStruct, Lombok, Code Reviews}
+\end{cvskills}
+\vspace{-5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Experiencia}
+\begin{cventries}
+	\cventry
+	{Ingeniero de Software}
+	{Asociaci\'{o}n La Nacional}
+	{Santo Domingo, DR}
+	{Oct 2025 -- Presente}
+	{\begin{cvitems}
+		\item {Construyo plataforma de reporting end-to-end para 200+ usuarios internos en 12 unidades de negocio, entregando 50+ reportes din\'{a}micos con latencia sub-segundo.}
+		\item {Refactorizo procedimientos almacenados Oracle PL/SQL cr\'{i}ticos, reduciendo generaci\'{o}n promedio de 45min a 27min (40\%) mediante optimizaci\'{o}n de consultas e \'{i}ndices.}
+		\item {Dise\~{n}o pipelines ETL event-driven en .NET 8 para reportes regulatorios (SB/Superintendencia), automatizando extracci\'{o}n, transformaci\'{o}n y validaci\'{o}n de 5M+ registros/mes en 15+ tipos de reporte.}
+		\item {Arquitecturo flujos de reportes automatizados con Spring Batch y Hangfire, reemplazando procesos manuales heredados y habilitando ejecuci\'{o}n programada, on-demand y event-triggered.}
+		\end{cvitems}}
+
+	\cventry
+	{Desarrollador de Software}
+	{Banco BDI}
+	{Santo Domingo, DR}
+	{Oct 2023 -- Sep 2025}
+	{\begin{cvitems}
+		\item {Construyo y despliego transacciones bancarias core usando PL/SQL y Oracle Forms, procesando miles de operaciones diarias.}
+		\item {Dise\~{n}o y desarrollo un sistema de entrega masiva de estados de cuenta con NestJS, automatizando la distribuci\'{o}n a m\'{a}s de 10,000 clientes.}
+		\item {Mantengo y extiendo middleware empresarial en tres stacks: C\#/.NET, Java/Spring y Node.js.}
+		\item {Creo reportes de cumplimiento regulatorio con Oracle Reports, SSRS, Crystal Reports y JasperReports.}
+		\item {Gestiono flujos de control de versiones y pipelines CI con Git, GitHub y Bitbucket.}
+		\end{cvitems}}
+\end{cventries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Proyectos}
+\begin{cventries}
+	\vspace{-3mm}
+	\cventry
+	{}
+	{Arquitectura de Microservicios \vspace{-5mm}}
+	{Java 21, Spring Cloud 2024, Eureka, Config Server, API Gateway \vspace{-5mm}}
+	{}
+	{\begin{cvsectionnormaltext}
+		\item {Sistema distribuido: registro de servicios con Eureka, Config Server centralizado (respaldado en Git), ruteo con Spring Cloud Gateway y comunicaci\'{o}n inter-servicios con OpenFeign. Proyecto multi-m\'{o}dulo Maven.
+		\newline \faGithubSquare\ \href{https://github.com/felix73sanchez/microservices-architecture}{github.com/felix73sanchez/microservices-architecture}}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-3mm}
+	\cventry
+	{}
+	{FACTUS -- API de Facturaci\'{o}n Electr\'{o}nica \vspace{-5mm}}
+	{Spring Boot 3, Spring Security, RestTemplate, PostgreSQL, Docker \vspace{-5mm}}
+	{}
+	{\begin{cvsectionnormaltext}
+		\item {API REST integrada con la plataforma de facturaci\'{o}n electr\'{o}nica Factus de Colombia. Gesti\'{o}n de tokens OAuth 2.0 con auto-refresh, cadena de filtros de Spring Security y build Docker multi-stage. Desplegado en Render.
+		\newline \faGithubSquare\ \href{https://github.com/felix73sanchez/apifactus-spring}{github.com/felix73sanchez/apifactus-spring}
+		\hspace{1mm} \faGithubSquare\ \href{https://github.com/felix73sanchez/front-factus}{front-factus (NextJS)}}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-3mm}
+	\cventry
+	{}
+	{Infraestructura Homelab \vspace{-5mm}}
+	{Bash, Docker Compose, administraci\'{o}n de servidores Linux \vspace{-5mm}}
+	{}
+	{\begin{cvsectionnormaltext}
+		\item {Automatizaci\'{o}n de infraestructura self-hosted: scripts de aprovisionamiento, stacks Docker Compose y gesti\'{o}n de servidores Linux.
+		\newline \faGithubSquare\ \href{https://github.com/felix73sanchez/fsx-infrastructure-homelab}{github.com/felix73sanchez/fsx-infrastructure-homelab}}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-5mm}
+
+\end{cventries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Educaci\'{o}n}
+\begin{cventries}
+	\vspace{-3mm}
+	\cventry
+	{}
+	{Universidad del Caribe \vspace{-5mm}}
+	{Santo Domingo, DR \vspace{-5mm}}
+	{2019 -- 2025 \vspace{-5mm}}
+	{\begin{cvsectionnormaltext}
+		\item{Licenciatura en Tecnolog\'{i}as de la Informaci\'{o}n (TICs)}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-3mm}
+	\cventry
+	{}
+	{INFOTEP \vspace{-5mm}}
+	{Santo Domingo, DR \vspace{-5mm}}
+	{2018 \vspace{-5mm}}
+	{\begin{cvsectionnormaltext}
+		\item{T\'{e}cnico en Dise\~{n}o y Desarrollo de Aplicaciones}
+	\end{cvsectionnormaltext}}
+\end{cventries}
+
+\end{document}

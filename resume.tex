@@ -1,0 +1,161 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% Based on: https://github.com/posquit0/Awesome-CV
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[]{awesome-cv}
+\usepackage{textcomp}
+\fontdir[fonts/]
+
+\newcommand*{\sectiondir}{resume/}
+
+%%% Color — black accent for a clean, professional look
+\colorlet{awesome}{awesome-red}
+
+%%% Tighter page margins to fit on one page
+\geometry{left=1.4cm, top=1.2cm, right=1.4cm, bottom=1.2cm, footskip=.4cm}
+
+    \begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Profile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\headerfirstnamestyle{Felix} \headerlastnamestyle{Sanchez} \\
+	\vspace{2mm}
+	{\faEnvelope\ felixsanchez73@outlook.com}  |  {\faMobile\ (+1809) 405-0876}  |  {\faMapMarker\ Santo Domingo, DR}
+	\newline {\faLinkedinSquare\ \href{https://www.linkedin.com/in/felixrsanchez/}{linkedin.com/in/felixrsanchez}}
+	\hspace{2mm} {\faGithubSquare\ \href{https://github.com/felix73sanchez}{github.com/felix73sanchez}}
+	\hspace{2mm} {\faLink\ \href{https://portfolio.fsxsys.org}{portfolio.fsxsys.org}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Skills}
+\begin{cvskills}
+	\cvskill{Languages}{Java 17/21, TypeScript, PL/SQL, Python, Bash}
+	\cvskill{Backend}{Spring Boot 3/4, Spring Cloud, Spring Data JPA, Spring Security, NestJS, .NET}
+	\cvskill{Architecture}{Microservices, CQRS, REST APIs, Layered Architecture, DTO Pattern}
+	\cvskill{Databases}{PostgreSQL, Oracle, MS-SQL Server, Redis}
+	\cvskill{DevOps}{Docker, Docker Compose, Linux (self-hosted homelab), Git, CI/CD}
+	\cvskill{Practices}{Clean Architecture, SOLID, TDD, MapStruct, Lombok, Code Reviews}
+\end{cvskills}
+\vspace{-5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Experience}
+\begin{cventries}
+	\cventry
+	{Software Engineer}
+	{Asociaci\'{o}n La Nacional}
+	{Santo Domingo, DR}
+	{Oct 2025 -- Present}
+	{\begin{cvitems}
+		\item {Build dynamic reports for internal stakeholders, reducing manual data extraction processes.}
+		\item {Maintain and optimize PL/SQL stored procedures in Oracle for critical business operations.}
+		\end{cvitems}}
+
+	\cventry
+	{Software Developer}
+	{Banco BDI}
+	{Santo Domingo, DR}
+	{Oct 2023 -- Sep 2025}
+	{\begin{cvitems}
+		\item {Developed Core Banking transactions using PL/SQL and Oracle Forms, handling daily financial operations.}
+		\item {Built a bulk savings account statement delivery system with NestJS, automating a previously manual process.}
+		\item {Maintained and extended enterprise middleware across C\#/.NET, Java/Spring and Node.js stacks.}
+		\item {Created reporting solutions for regulatory compliance (Oracle Reports, SSRS, Crystal Reports, Jasper).}
+		\item {Managed source code repositories and branching strategies with Git, GitHub and BitBucket.}
+		\end{cvitems}}
+\end{cventries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Projects}
+\begin{cventries}
+	\vspace{-3mm}
+	\cventry
+	{}
+	{Client Management API \vspace{-5mm}}
+	{Spring Boot 4, Spring Data JPA, MapStruct, PostgreSQL, Docker \vspace{-5mm}}
+	{}
+	{\begin{cvsectionnormaltext}
+		\item {REST API with CQRS pattern (commands/queries separation), Java Records for DTOs, MapStruct mappers, Jakarta Validation and @RestControllerAdvice. Multi-stage Dockerfile with non-root user. Unit tests with Mockito/AssertJ.
+		\newline \faGithubSquare\ \href{https://github.com/felix73sanchez/oriontek-clients}{github.com/felix73sanchez/oriontek-clients}}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-3mm}
+	\cventry
+	{}
+	{Microservices Architecture \vspace{-5mm}}
+	{Java 21, Spring Cloud 2024, Eureka, Config Server, API Gateway \vspace{-5mm}}
+	{}
+	{\begin{cvsectionnormaltext}
+		\item {Distributed system: Eureka service registry, centralized Config Server (Git-backed), Spring Cloud Gateway routing, and OpenFeign for inter-service communication. Multi-module Maven project.
+		\newline \faGithubSquare\ \href{https://github.com/felix73sanchez/microservices-architecture}{github.com/felix73sanchez/microservices-architecture}}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-3mm}
+	\cventry
+	{}
+	{FACTUS -- Electronic Invoicing API \vspace{-5mm}}
+	{Spring Boot 3, Spring Security, RestTemplate, PostgreSQL, Docker \vspace{-5mm}}
+	{}
+	{\begin{cvsectionnormaltext}
+		\item {REST API integrating with Colombia\textquotesingle{}s Factus e-invoicing platform. OAuth 2.0 token management with auto-refresh, Spring Security filter chain and multi-stage Docker build. Deployed on Render.
+		\newline \faGithubSquare\ \href{https://github.com/felix73sanchez/apifactus-spring}{github.com/felix73sanchez/apifactus-spring}
+		\hspace{1mm} \faGithubSquare\ \href{https://github.com/felix73sanchez/front-factus}{front-factus (NextJS)}}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-3mm}
+	\cventry
+	{}
+	{Homelab Infrastructure \vspace{-5mm}}
+	{Bash, Docker Compose, Linux server administration \vspace{-5mm}}
+	{}
+	{\begin{cvsectionnormaltext}
+		\item {Self-hosted infra automation: provisioning scripts, Docker Compose stacks and Linux server management.
+		\newline \faGithubSquare\ \href{https://github.com/felix73sanchez/fsx-infrastructure-homelab}{github.com/felix73sanchez/fsx-infrastructure-homelab}}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-5mm}
+
+\end{cventries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Education}
+\begin{cventries}
+	\vspace{-3mm}
+	\cventry
+	{}
+	{Universidad del Caribe \vspace{-5mm}}
+	{Santo Domingo, DR \vspace{-5mm}}
+	{2019 -- 2025 \vspace{-5mm}}
+	{\begin{cvsectionnormaltext}
+		\item{BSc in Information Technology (TICs)}
+	\end{cvsectionnormaltext}}
+
+	\vspace{-3mm}
+	\cventry
+	{}
+	{INFOTEP \vspace{-5mm}}
+	{Santo Domingo, DR \vspace{-5mm}}
+	{2018 \vspace{-5mm}}
+	{\begin{cvsectionnormaltext}
+		\item{Technical Diploma in Application Design and Development}
+	\end{cvsectionnormaltext}}
+\end{cventries}
+
+\end{document}
